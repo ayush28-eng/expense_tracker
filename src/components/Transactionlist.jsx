@@ -40,7 +40,7 @@ export function TransactionList({ transactions, onDelete, onUpdate }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/transactions/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/transactions/${id}`,
         {
           method: "PUT",
           headers: {
@@ -70,7 +70,7 @@ export function TransactionList({ transactions, onDelete, onUpdate }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/transactions/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/transactions/${id}`,
         {
           method: "DELETE",
         }

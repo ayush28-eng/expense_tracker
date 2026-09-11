@@ -16,7 +16,7 @@ function App() {
   const [budget, setBudget] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/transactions")
+    fetch(`${import.meta.env.VITE_API_URL}/api/transactions`)
       .then((res) => res.json())
       .then((data) => {
         setTransactions(data);
